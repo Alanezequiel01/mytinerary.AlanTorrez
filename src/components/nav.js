@@ -13,9 +13,10 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import "../styles/styles.css";
 import globito from '../assets/globo.png'
+import user from '../assets/user.png'
 
 const pages = ['Home', 'Cities'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Log In', 'Sign Up'];
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -44,7 +45,7 @@ const NavBar = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' }}}
+            sx={{ mr: 2, display: { xs: 'none', md: 'flex'}}}
           >
             <img src={globito} className="logoPequeño"/>
           </Typography>
@@ -57,7 +58,6 @@ const NavBar = () => {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
-              className="item"
             >
               <MenuIcon />
             </IconButton>
@@ -99,7 +99,7 @@ const NavBar = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color:'black', fontSize:'1.1rem', display: 'block'}} //propiedades para los textos del nav 
               >
                 {page}
               </Button>
@@ -109,7 +109,7 @@ const NavBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src={user} />
               </IconButton>
             </Tooltip>
             <Menu

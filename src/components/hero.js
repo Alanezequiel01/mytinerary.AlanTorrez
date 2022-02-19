@@ -1,6 +1,6 @@
 import React from 'react'
 import "../styles/styles.css";
-import globito from '../assets/globo.png'
+import globito from '../assets/globo_blanco.png'
 
 
 const Hero = () => {
