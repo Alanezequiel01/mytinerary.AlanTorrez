@@ -1,0 +1,64 @@
+const data =[
+      {
+        "place": "Argentina, Mendoza",
+        "description": "Fiesta de las colectividades",
+        "image":"argentina_mendoza.jpg"
+      },
+      {
+        "place": "United States, Miami",
+        "description": "Fiesta de las colectividades",
+        "image":"estados_unidos_miami.jpg"
+      },
+      {
+        "place": "Cuba, Havana",
+        "description": "Fiesta de las colectividades",
+        "image":"cuba_la_habana.jpg"
+      },
+      {
+        "place": "Egypt, Kom Ombo",
+        "description": "Fiesta de las colectividades",
+        "image":"egipto_kom_ombo.jpg"
+      },
+      {
+        "place": "France, Paris",
+        "description": "Fiesta de las colectividades",
+        "image":"francia_paris.jpg"
+      },
+      {
+        "place": "India, New Delhi",
+        "description": "Fiesta de las colectividades",
+        "image":"india_nueva_delhi.jpg"
+      },
+      {
+        "place": "England, London",
+        "description": "Fiesta de las colectividades",
+        "image":"inglaterra_londres.jpg"
+      },
+      {
+        "place": "Italy, Venice",
+        "description": "Fiesta de las colectividades",
+        "image":"italia_venecia.jpg"
+      },
+      {
+        "place": "Maldives, Addu",
+        "description": "Fiesta de las colectividades",
+        "image":"maldivas_addu.jpg"
+      },
+      {
+        "place": "Mexico, Yucatan",
+        "description": "Fiesta de las colectividades",
+        "image":"mexico_yucatan.jpg"
+      },
+      {
+        "place": "Peru, Machu Picchu",
+        "description": "Fiesta de las colectividades",
+        "image":"peru_machu_pichu.jpg"
+      },
+      {
+        "place": "China, Xi An",
+        "description": "Fiesta de las colectividades",
+        "image":"xian_china.jpg"
+      },
+    ]
+  
+    export default data;

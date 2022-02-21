@@ -11,14 +11,14 @@ const Footer = () => {
   return (
     <div className="boxFooter">
       <div className="info">
-        <div>
+        <div className="boxInfo">
         <p>Nashville, Tennessee 37319</p>
         <p>contact@mytinerary.com</p>
         <p>+1 556-445-7847</p>
         <p>+34 556-445-8564</p>
         </div>
         <div>
-        <div className="box1nav">
+        <div className="boxNavFooter">
         <LinkRouter to="home" className="links">
         <h2 className="btnNav">HOME</h2>
         </LinkRouter>

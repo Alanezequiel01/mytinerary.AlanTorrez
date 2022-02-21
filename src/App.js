@@ -1,9 +1,6 @@
 import React from 'react'
 import './App.css';
 import NavBar from './components/nav'
-import Hero from './components/hero'
-import CallToAction from './components/calltoaction'
-import Carousel from './components/carousel'
 import Footer from './components/footer'
 import Cities from './components/cities'
 import Home from './components/home'

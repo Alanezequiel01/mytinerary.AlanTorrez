@@ -1,6 +1,6 @@
 import React from 'react'
 import CallToAction from './calltoaction'
-import Carousel from './carousel'
+import Carrousel from './carousel'
 import Hero from './hero'
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
     <div>
       <Hero/>
       <CallToAction/>
-      <Carousel/>
+      <Carrousel/>
     </div>
   );
 }

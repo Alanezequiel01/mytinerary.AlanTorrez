@@ -1,0 +1,19 @@
+.Cards{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    border-top-left-radius: 30rem;
+    border-top-right-radius: 30rem;
+}
+
+.card{
+    margin-left: 2%;
+    margin-top: 2.5%;
+    color: black !important;
+}
+
+.card img{
+    width: 50rem;
+    height:21rem;
+}
