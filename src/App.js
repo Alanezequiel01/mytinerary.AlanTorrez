@@ -6,25 +6,24 @@ import CallToAction from './components/calltoaction'
 import Carousel from './components/carousel'
 import Footer from './components/footer'
 import Cities from './components/cities'
+import Home from './components/home'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 const App = () => {
   
   return (
+      <BrowserRouter>
     <div className="App">
       <NavBar/>
-      <BrowserRouter>
 
       <Routes>
       <Route path="/cities" element={<Cities/>}/> 
+      <Route path="*" element={<Home/>}/> 
       </Routes>
 
-      <Hero/>
-      <CallToAction/>
-      <Carousel/>
-      </BrowserRouter>
       <Footer/>
     </div>
+      </BrowserRouter>
   );
 }
 

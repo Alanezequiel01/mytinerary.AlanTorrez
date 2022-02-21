@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Pragati+Narrow&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #app { height: 100% }
 html,
 body {
@@ -57,15 +65,44 @@ body {
 
 .NavBar{
     height: 10vh;
-    background-color: rgb(255, 255, 255) !important;
+    padding: 0 3rem;
+    background-color: white;
     display: flex;
-    justify-content: center;
-    
+    justify-content: space-between;
+    align-items: center;
   }
+
+.box1nav{
+  display: flex;
+}  
+
+.box2nav{
+  display: flex;
+} 
+
+.links{
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.btnNav{
+  padding: .5rem;
+  color: black;
+  border: 1px solid black;
+  border-radius: 3px;
+  transition: 500ms;
+}
+
+.btnNav:hover{
+  color: white;
+  background-color: #F12B3B;
+}
   
 .containerHero{
     width: 100%;
-    height: 90vh;
+    min-height: auto;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.750), rgba(0, 0, 0, 0.200)), url(../assets/travel-5219496.jpg) !important;
     background-size: initial;
     background-position: center;
@@ -77,9 +114,10 @@ body {
 
   .containerLogo{
       margin: 2rem 5rem 2rem 0;
-      padding: 10rem;
-      background-color: rgba(255, 255, 255, 0.226);
-      color: #1E558C;
+      padding: 7rem 10rem;
+      border-radius: 1rem;
+      background-color: rgba(255, 255, 255, 0.287);
+      color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -87,11 +125,16 @@ body {
   }
 
   .logo{
-     width: 12rem;
+     width: 15rem;
   }
 
   .logoPequeño{
       width: 5rem;
+  }
+
+  .user{
+    width: 2.5rem;
+    margin-left: 1rem;
   }
 
   .slogan{
@@ -102,20 +145,77 @@ body {
       color: white;
   }
 
-.navItems{
-  font-size: 2rem;
-}
-
 .boxCallToAction{
   width: 100%;
-  height: 50vh;
-  background-color: burlywood;
+  min-height: auto;
+  padding: 0 10rem;
+  background-color: white;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.call{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btnCall{
+  width: auto;
+  padding: .5rem;
+  margin-top: 1.5rem;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: 500ms;
+}
+
+.btnCall:hover{
+  color: white;
+  background-color: #F12B3B;
+}
+
+.cabaña{
+  margin: 1.5rem 0;
+  width: 630px;
+  border-radius: 1rem;
 }
 
 .boxFooter{
   width: 100%;
-  height: 20vh;
-  background-color: burlywood;
+  min-height: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.info{
+  max-width: 70%;
+  /* background-color: rgba(255, 0, 0, 0.411); */
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.cierre{
+  max-width: 70%;
+  /* background-color: rgba(255, 0, 0, 0.411); */
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
 }
 
 .boxInProcess{
@@ -124,4 +224,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.nombreLogo{
+  font-family: 'Oooh Baby', cursive;
+  color: #F12B3B;
+  margin-bottom: 1rem;
 }
