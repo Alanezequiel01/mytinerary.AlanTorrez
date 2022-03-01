@@ -1,0 +1,139 @@
+// MongoDB Playground
+//https://docs.mongodb.com/manual/crud/
+const database = 'MyTinerary';
+
+
+use(database);
+
+// The drop() command destroys all data from a collection.
+db.ciudades.drop();
+// Inserta los documentos que nosotros le indiquemos.
+db.ciudades.insertMany([
+
+    {
+    "country": "Argentina",
+    "city": "Mendoza",
+    "description": "Mendoza is a city in Argentina’s Cuyo region and the heart of Argentina's wine country, famed for Malbecs and other red wines. Its many bodegas (wineries) offer tastings and tours.",
+    "image":"argentina_mendoza.jpg",
+    "date":"October 18, 2016"
+  },
+  {
+    "country": "United States",
+    "city": "Miami",
+    "description": "Miami, Florida, U.S. A major transportation and business hub, Miami is a leading resort and Atlantic Ocean port situated on Biscayne Bay at the mouth of the Miami River.",
+    "image":"estados_unidos_miami.jpg",
+    "date":"January 13, 2019"
+  },
+  {
+    "country": "Cuba",
+    "city": "Havana",
+    "description": "Havana is Cuba’s capital city. Spanish colonial architecture in its 16th-century Old Havana core includes the Castillo de la Real Fuerza, a fort and maritime museum. The National Capitol Building is an iconic 1920s landmark.",
+    "image":"cuba_la_habana.jpg",
+    "date":"December 26, 2014"
+  },
+  {
+    "country": "Egypt",
+    "city": "Kom Ombo",
+    "description": "Today Kom Ombo may be a sleepy agricultural backwater surrounded by sugar cane fields, but this temple dedicated to the gods Sobek and Haroeris is a reminder of this area's importance in Ancient Egypt due to its prime position along the Nile.",
+    "image":"egipto_kom_ombo.jpg",
+    "date":"August 30, 2020"
+  },
+  {
+    "country": "France",
+    "city": "Paris",
+    "description": "Known as the Latin Quarter,  It's also known for its bookshops, including the famed Shakespeare & Company. Family-friendly attractions include the Jardin des Plantes botanical gardens and the National Museum of Natural History. Wonderfull tower Eiffel and stately Panthéon building holds the remains of notables like Voltaire and Marie Curie.",
+    "image":"francia_paris.jpg",
+    "date":"June 6, 2009"
+  },
+  {
+    "country": "India",
+    "city": "New Delhi",
+    "description": "New Delhi has great historical significance as it was home to powerful people, such as the Pāṇḍavas and the Mughals. The city has many historical monuments and tourist attractions as well as lively marketplaces and great food, such as chaat.",
+    "image":"india_nueva_delhi.jpg",
+    "date":"March 27, 2011"
+  },
+  {
+    "country": "England",
+    "city": "London",
+    "description": "London is the capital city of the United Kingdom. It is the U.K.'s largest metropolis and its economic, transportation, and cultural centre. London is also among the oldest of the world's great cities, with its history spanning nearly two millennia.",
+    "image":"inglaterra_londres.jpg",
+    "date":"April 11, 2018"
+  },
+  {
+    "country": "Italy",
+    "city": "Venice",
+    "description": "Venice, known also as the “City of Canals,” “The Floating City,” and “Serenissima,” is arguably one of Italy's most picturesque cities. With its winding canals, striking architecture, and beautiful bridges, Venice is a popular destination for travel.",
+    "image":"italia_venecia.jpg",
+    "date":"December 16, 2021"
+  },
+  {
+    "country": "Maldives",
+    "city": "Addu",
+    "description": "Addu Atoll, also known as Seenu, is the southernmost island group in the Maldives. It consists of several large islands ringing a deep lagoon. There are several channels leading into the lagoon, with the best of these at the southern end of the atoll.",
+    "image":"maldivas_addu.jpg",
+    "date":"May 8, 2010"
+  },
+  {
+    "country": "Mexico",
+    "city": "Yucatan",
+    "description": "Yucatán, the Mexican state, is known for its Gulf of Mexico beaches and Mayan ruins. Famed Chichén Itzá encompasses a massive pyramid, ball court and stone temples. Other Mayan sites include Ek Balam, noted for well preserved sculptures, and Uxmal, with its intricate carved facades.",
+    "image":"mexico_yucatan.jpg",
+    "date":"February 23, 2016"
+  },
+  {
+    "country": "Peru",
+    "city": "Machu Picchu",
+    "description": "Machu Picchu is an Incan citadel set high in the Andes Mountains in Peru, above the Urubamba River valley. Built in the 15th century and later abandoned, it’s renowned for its sophisticated dry-stone walls that fuse huge blocks without the use of mortar, intriguing buildings that play on astronomical alignments and panoramic views.",
+    "image":"peru_machu_pichu.jpg",
+    "date":"October 27, 2013"
+  },
+  {
+    "country": "China",
+    "city": "Xi An",
+    "description": "Xi’an is a large city and capital of Shaanxi Province in central China.  It marks the Silk Road’s eastern end and was home to the Zhou, Qin, Han and Tang dynasties' ruling houses. At archaeological sites in Xi’an’s surrounding plains are the famed Bingmayong (Terra Cotta Army), thousands of life-size, hand-molded figures buried with China’s first emperor, Qin Shi Huang.",
+    "image":"xian_china.jpg",
+    "date":"July 9, 2014"
+  },
+  {
+    "country": "Colombia",
+    "city": "Santa Marta",
+    "description": "Santa Marta is a city on the Caribbean Sea in the northern Colombian department of Magdalena. A busy port, it was also the first Spanish settlement in Colombia. It's the gateway for trips into the Tayrona National Natural Park, and for multiday guided treks to the Lost City (Teyuna) archaeological site in the Sierra Nevada de Santa Marta mountains.",
+    "image":"santa_marta_colombia.jpg",
+    "date":"March 18, 2018"
+  },
+  {
+    "country": "Brazil",
+    "city": "Brasília",
+    "description": "Brasília, inaugurated as Brazil’s capital in 1960, is a planned city distinguished by its white, modern architecture, chiefly designed by Oscar Niemeyer. Laid out in the shape of an airplane, its “fuselage” is the Monumental Axis, 2 wide avenues flanking a massive park.",
+    "image":"brasilia_brazil.jpg",
+    "date":"September 30, 2019"
+  },
+  {
+    "country": "Rusia",
+    "city": "Moscow",
+    "description": "Moscow, on the Moskva River in western Russia, is the nation’s cosmopolitan capital. In its historic core is the Kremlin, a complex that’s home to the president and tsarist treasures in the Armoury. Outside its walls is Red Square, Russia's symbolic center.",
+    "image":"moscow_rusia.jpg",
+    "date":"December 4, 2012"
+  },
+  {
+    "country": "Spain",
+    "city": "Seville",
+    "description": "Seville is the capital and largest city of the Spanish autonomous community of Andalusia and the province of Seville. It is situated on the lower reaches of the River Guadalquivir, in the southwest of the Iberian Peninsula.",
+    "image":"seville_spain.jpg",
+    "date":"January 22, 2022"
+  },
+  {
+    "country": "Germany",
+    "city": "Munich",
+    "description": "Munich, Bavaria’s capital, is home to centuries-old buildings and numerous museums. The city is known for its annual Oktoberfest celebration and its beer halls, including the famed Hofbräuhaus, founded in 1589.",
+    "image":"munich_germany.jpg",
+    "date":"June 29, 2008"
+  },
+  {
+    "country": "United Arab Emirates",
+    "city": "Dubai",
+    "description": "Dubai is a city and emirate in the United Arab Emirates known for luxury shopping, ultramodern architecture and a lively nightlife scene. Burj Khalifa, an 830m-tall tower, dominates the skyscraper-filled skyline. At its foot lies Dubai Fountain, with jets and lights choreographed to music.",
+    "image":"dubai_united_arab_emirates.jpg",
+    "date":"September 14, 2017"
+  },
+])

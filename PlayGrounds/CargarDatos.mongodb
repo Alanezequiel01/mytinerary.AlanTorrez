@@ -1,0 +1,28 @@
+// MongoDB Playground
+//https://docs.mongodb.com/manual/crud/
+const database = 'myTynerary';
+
+
+use(database);
+
+// The drop() command destroys all data from a collection.
+db.ciudades.drop();
+// Inserta los documentos que nosotros le indiquemos.
+db.ciudades.insertMany([
+  
+  
+    {"nombre":"Buenos Aires",
+     "pais":"Argentina",
+     },
+     {"nombre":"New York",
+     "pais":"EEUU",
+     },
+     {"nombre":"Cordoda",
+     "pais":"Argentina",
+     },
+     {"nombre":"Ushuaia",
+     "pais":"Argentina",
+     },    
+   
+]);
+

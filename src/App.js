@@ -2,8 +2,8 @@ import React from 'react'
 import './App.css';
 import NavBar from './components/nav'
 import Footer from './components/footer'
-import Cities from './components/cities'
-import Home from './components/home'
+import Cities from './pages/cities'
+import Home from './pages/home'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 const App = () => {

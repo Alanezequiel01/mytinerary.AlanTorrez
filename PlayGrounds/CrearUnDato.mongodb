@@ -1,0 +1,25 @@
+// MongoDB Playground
+//https://docs.mongodb.com/manual/crud/
+
+const database = 'MyTinerary';
+
+//Datos a cargar
+const _nombre = "orlando";
+const _pais = "USA";
+
+
+const okNombre = _nombre.charAt(0).toUpperCase() +_nombre.slice(1).toLowerCase()
+const okPais= _pais
+
+use(database); // llamamos a nuestra base de datos
+
+// Busca si el documento existe si no existe lo crea, si existe lo modifica con los datos que le carguemos
+db.Ciudades.findAndModify({query:{nombre:okNombre},//Lo busca por appelido
+update:{$set:{nombre:okNombre, 
+              pais:okPais,
+             }},
+              upsert:true} //Upsert es una mezcla entre update e insert, 
+                           //es decir que si encuentra el documento que establecimos en la query lo actualiza
+                           //si no lo encuentra lo inserta, 
+                           //por defecto uposert es false si no lo declaramos
+)

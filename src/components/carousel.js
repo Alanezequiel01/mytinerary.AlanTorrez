@@ -1,81 +1,70 @@
-import React, { useRef, useState } from "react"; 
+import React from "react";
 // Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import cities from './data'
 
-import { Swiper, SwiperSlide } from "swiper/react";  
-// Import Swiper styles 
 
-import "swiper/css"; 
-import "swiper/css/pagination"; 
-import "../styles/carrousel.css"; 
-import "../styles/cards.css"
-import "../styles/styles.css"
-import ciudades from './data'  
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/grid";
+import "swiper/css/pagination";
+import "swiper/css/navigation"
+import "../styles/carousel.css"
+
+//Card
+import { Card } from 'react-bootstrap';
 import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
-import "swiper/css/grid"
-// import required modules
+import "../styles/card.css"
 
-import { Pagination, Autoplay, Grid } from "swiper";   
-export default function Gallery() {   return (     
-    <div className="gallery"> 
-    <h1 className="tittleCarousel">Popular MyTineraries</h1>      
-    <Swiper         
-        slidesPerView={2}      
-        slidesPerGroup={2}         
-        spaceBetween={30}     
+// import required modules
+import { Grid, Pagination, Navigation } from "swiper";
+
+export default function Carousel() {
+  return (
+    <div className="boxSwiper">
+      <Swiper
+        slidesPerView={1}
         grid={{
-            rows:2
-        }}    
-        pagination={{           
-            clickable: true,         
-        }}         
-        modules={[Pagination, Autoplay, Grid]}         
-        autoplay={{delay: 8000, disableOnInteraction: false }}         
-        className="mySwiper"         
-        breakpoints={{           
-            "@0.00":{             
-                slidesPerView: 1,             
-                spaceBetween: 10,           
-            },           
-            "@0.75":{             
-                slidesPerView: 2,             
-                spaceBetween: 10,           
-            },           
-            "@1.00":{             
-                slidesPerView: 2,             
-                spaceBetween: 10,
-            },
-            "@1.50":{             
-                slidesPerView: 2,             
-                spaceBetween: 10,           
-            }         
-        }}       
-        >          
-        {ciudades.map(card =>           
-        <SwiperSlide>                          
-            <div className="prueba">                
-            <Card className="card" sx={{ marginTop:-5}}>
-                <CardActionArea>
-                <CardMedia
+          rows: 2, 
+        }}
+        spaceBetween={30}
+        navigation={true}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          400: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+        }} 
+        modules={[Grid, Pagination, Navigation]}
+        className="mySwiper"
+      >
+        {cities.map(card =>
+        <SwiperSlide>
+            <Card className="carta bg-dark text-white">
+            <CardMedia
+                    className="imagenCiudad"
                     component="img"
-                    width="400"
                     image={process.env.PUBLIC_URL+`img_ciudades/${card.image}` }
-                    alt="image${card.place}"
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                    {card.place}
-                    </Typography>
-                </CardContent>
-                </CardActionArea>
-            </Card>            
-            </div>          
-        </SwiperSlide>                  
-        )}       
-        </Swiper>     
-        </div>   
-        ); 
-    }
+                    alt="Image City"
+            />
+                <Card.ImgOverlay className="textCard">
+                <Card.Title>{card.city} - {card.country}</Card.Title>
+                </Card.ImgOverlay>
+            </Card>
+        </SwiperSlide>
+        )} 
+      </Swiper>
+    </div>
+  );
+}
