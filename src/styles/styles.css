@@ -8,50 +8,35 @@
   box-sizing: border-box;
 }
 
-.NavBar{
-    width: 100%;
-    height: 10vh;
-    padding: 0 3rem;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.boxNavBar{
+  background-color: white !important;
+}
 
-.box1nav{
-  display: flex;
-}  
+/* Normal nav */
+.normalLink{
+  text-decoration: none !important;
+  color: black !important;
+}
 
-.box2nav{
-  display: flex;
-} 
-
-.links{
-  margin-left: 1rem;
-  display: flex;
-  align-items: center;
+/* Nav responsive */
+.linkResponsive{
   text-decoration: none;
-  font-family: 'Archivo', sans-serif;
+  color: black !important;
 }
 
-.btnNav{
-  padding: .5rem;
-  color: black;
-  border: 1px solid black;
-  border-radius: 3px;
-  transition: 500ms;
+.botonesLink:hover{
+  color: black !important;
 }
 
-.btnNav:hover{
-  color: white;
-  background-color: #03B5AA;
+.MuiSvgIcon-root{
+  color: black !important;
 }
+
   
 .containerHero{
     width: 100%;
     min-height: auto;
     padding-right: 5rem;
-    padding-left: 5rem;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.500), rgba(0, 0, 0, 0.150)), url(../assets/panorama-2117310.jpg) !important;
     background-size: initial;
     background-attachment: fixed;
@@ -60,6 +45,12 @@
     display: flex;
     justify-content: end;
     align-items: center;
+  }
+
+  .nombreLogo{
+    font-family: 'Oooh Baby', cursive !important;
+    color: #03B5AA;
+    margin-bottom: 1rem;
   }
 
   .containerLogo{
@@ -195,7 +186,7 @@
   min-height: auto;
   background-color: rgba(202, 202, 202, 0.678);
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -212,18 +203,18 @@
 .containerInput{
   width: 26rem;
   margin-top: 2rem;
-  margin-right: 9rem;
   display: flex;
+  justify-content: center;
 }
 
 .inputSearch{
-  width: 100% !important;
+  width: 80% !important;
 }
 
-.nombreLogo{
-  font-family: 'Oooh Baby', cursive;
-  color: #03B5AA;
-  margin-bottom: 1rem;
+.btn-success{
+  margin-left: .5rem;
+  background-color: #03B5AA !important;
+  border: 1px solid black !important;
 }
 
 .tittleCarousel{
@@ -235,3 +226,31 @@
   color: #03B5AA;
 }
 
+
+@media (max-width: 500px) { 
+  .containerHero{
+    padding: 0;
+  }
+}
+
+.detalles{
+  width: 100%;
+  height: 100vh;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardsButton{
+  padding: 0 .5rem;
+  background-color: white;
+  border: none;
+  color: rgba(47, 47, 185, 0.794);
+  transition: 500ms;
+}
+
+.cardsButton:hover{
+  background-color: #03B5AA;
+  color: white;
+}

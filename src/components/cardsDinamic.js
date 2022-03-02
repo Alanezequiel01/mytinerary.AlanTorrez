@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "../styles/styles.css";
 
-//CARD
+//CARDS
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -10,10 +10,10 @@ import CardActions from '@mui/material/CardActions';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import "../styles/cardCities.css"; 
+import {Link as LinkRouter} from "react-router-dom"
 
 //DATABASE
 import axios from 'axios';
@@ -69,9 +69,9 @@ const InProcess = () => {
         placeholder="Search city or country"
         onChange={handleChange}
         />
-        {/* <button className="btn btn-success">
+        <button className="btn btn-success">
         <FontAwesomeIcon icon={faSearch}/>
-        </button> */}
+        </button>
       </div>
       <div className="boxInProcess2">
       {cities?.map(data=>
@@ -79,7 +79,7 @@ const InProcess = () => {
         <div className='flexHeader'>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500]}} aria-label="recipe"> 
+          <Avatar sx={{ backgroundColor: "#03B5AA"}} aria-label="recipe"> 
             A
           </Avatar>
         }
@@ -107,6 +107,10 @@ const InProcess = () => {
         <IconButton aria-label="share">
           <ShareIcon />
         </IconButton>
+        
+         <LinkRouter to="/details">  
+        <button className="cardsButton"> See More...</button>
+         </LinkRouter>
       </CardActions>
     </Card>
 

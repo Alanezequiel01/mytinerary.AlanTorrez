@@ -1,6 +1,6 @@
 import React from 'react'
 import "../styles/styles.css";
-import InProcess from '../components/inprocess'
+import InProcess from '../components/cardsDinamic'
 
 const Cities = () => {
   

@@ -9,7 +9,7 @@ const CallToAction = () => {
     <div className="boxCallToAction">
       <div className="call">
         <h1>Fun experiences awaits you out there! </h1>
-        <LinkRouter to="cities" className="links">
+        <LinkRouter to="cities" className="normalLink">
         <h3 className="btnCall">LET'S GO</h3>
         </LinkRouter>  
       </div>

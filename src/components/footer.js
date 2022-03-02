@@ -5,6 +5,7 @@ import instagram from '../assets/instagram.png'
 import facebook from '../assets/facebook.png'
 import youtube from '../assets/youtube.png'
 import whatsapp from '../assets/whatsapp.png'
+import MenuItem from '@mui/material/MenuItem';
 
 const Footer = () => {
   
@@ -18,14 +19,12 @@ const Footer = () => {
         <p>+34 556-445-8564</p>
         </div>
         <div>
-        <div className="boxNavFooter">
-        <LinkRouter to="home" className="links">
-        <h2 className="btnNav">HOME</h2>
-        </LinkRouter>
-        <LinkRouter to="cities" className="links">
-        <h2 className="btnNav">CITIES</h2>
-        </LinkRouter>
-      </div>
+              <MenuItem>
+              <LinkRouter to="home" className="normalLink">HOME</LinkRouter>
+              </MenuItem>
+              <MenuItem>
+              <LinkRouter to="cities" className="normalLink">CITIES</LinkRouter>
+              </MenuItem>
         </div>
       </div>
       <div className="cierre">
