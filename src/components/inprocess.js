@@ -16,22 +16,64 @@ import ShareIcon from '@mui/icons-material/Share';
 import "../styles/cardCities.css"; 
 
 //DATABASE
-import  {getCities}  from '../apiCalls'
+import axios from 'axios';
+
+//INPUT SEARCH
+import "bootstrap/dist/css/bootstrap.min.css";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faSearch} from '@fortawesome/free-solid-svg-icons';
 
 const InProcess = () => {
-  const [cities, setCities] = useState()
-  const [reload, setReload] = useState(false)
-  const [modid, setModId]= useState()
+  const [cities, setCities] = useState([]);
+  const [cardsCities, setCardsCities] = useState([]);
+  const [search, setSearch] = useState("");
+
+  const peticionGet= async()=>{
+    await axios.get("http://localhost:4000/api/V1/cities")
+  .then(response=>{
+    setCardsCities(response.data.response.ciudades);
+    setCities(response.data.response.ciudades);
+    }).catch(error=>{
+      console.log(error)
+    })
+  }
 
   useEffect(()=>{
-    getCities()
-    .then(response=>setCities(response.data.response.ciudades))
-    
-    },[reload])
-  
+    peticionGet()
+  },[])
+
+
+  const handleChange=e=>{
+    setSearch(e.target.value);
+    filter(e.target.value);
+  }
+
+  const filter=(terminoBusqueda)=>{
+    var resultadoBusqueda=cardsCities.filter((elemento)=>{
+      if(elemento.city.toString().toLowerCase().startsWith(terminoBusqueda.toLowerCase().trim())
+      || elemento.country.toString().toLowerCase().startsWith(terminoBusqueda.toLowerCase().trim())
+      ){
+        return elemento;
+      }
+    });
+    setCities(resultadoBusqueda);
+  }
+
   return (
 
     <div className="boxInProcess">
+      <div className="containerInput"> 
+        <input
+        className="form-control inputSearch"
+        value={search}
+        placeholder="Search city or country"
+        onChange={handleChange}
+        />
+        {/* <button className="btn btn-success">
+        <FontAwesomeIcon icon={faSearch}/>
+        </button> */}
+      </div>
+      <div className="boxInProcess2">
       {cities?.map(data=>
       <Card sx={{ maxWidth: 345 }} className="cardDinamic">
         <div className='flexHeader'>
@@ -69,6 +111,7 @@ const InProcess = () => {
     </Card>
 
 )}
+</div>
       
     </div>
   );

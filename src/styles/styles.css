@@ -192,14 +192,32 @@
 
 .boxInProcess{
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   background-color: rgba(202, 202, 202, 0.678);
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.boxInProcess2{
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(202, 202, 202, 0);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  
+}
 
+/* estilos para el input */
+.containerInput{
+  width: 26rem;
+  margin-top: 2rem;
+  margin-right: 9rem;
+  display: flex;
+}
 
+.inputSearch{
+  width: 100% !important;
 }
 
 .nombreLogo{
@@ -215,6 +233,5 @@
   font-family: 'Play', sans-serif;
   font-size: 2.5rem;
   color: #03B5AA;
-
 }
 

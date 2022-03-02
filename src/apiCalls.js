@@ -3,6 +3,7 @@ import axios from 'axios';
 export const  getCities = async () => {
     try {
         let data = await axios.get(`http://localhost:4000/api/V1/cities`)
+        
         return data
     }
     catch (error) {
