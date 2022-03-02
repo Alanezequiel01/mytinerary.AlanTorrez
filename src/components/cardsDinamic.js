@@ -23,12 +23,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSearch} from '@fortawesome/free-solid-svg-icons';
 
-const InProcess = () => {
+const CardsDinamic = () => {
   const [cities, setCities] = useState([]);
   const [cardsCities, setCardsCities] = useState([]);
   const [search, setSearch] = useState("");
 
-  const peticionGet= async()=>{
+  const getCities= async()=>{
     await axios.get("http://localhost:4000/api/V1/cities")
   .then(response=>{
     setCardsCities(response.data.response.ciudades);
@@ -39,7 +39,7 @@ const InProcess = () => {
   }
 
   useEffect(()=>{
-    peticionGet()
+    getCities()
   },[])
 
 
@@ -121,4 +121,4 @@ const InProcess = () => {
   );
 }
 
-export default InProcess;
+export default CardsDinamic;
