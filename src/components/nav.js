@@ -12,7 +12,6 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
 import "../styles/styles.css"
-import globito from '../assets/globo.png'
 import {Link as LinkRouter} from "react-router-dom"
 
 const settings = ['Login', 'Register'];

@@ -2,11 +2,11 @@
 // Use Ctrl+Space inside a snippet or a string literal to trigger completions.
 //https://docs.mongodb.com/manual/crud/
 
-const database = 'alumnos';
-const collection = 'acnur';
+const database = 'MyTinerary';
+const collection = 'itinerarios';
 
 // Create a new database.
-use(database); //Si la Base de datos no existe la crea
+use(MyTinerary); //Si la Base de datos no existe la crea
 
 // Create a new collection.
 db.createCollection(collection);

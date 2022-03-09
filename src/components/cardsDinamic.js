@@ -74,7 +74,7 @@ const CardsDinamic = () => {
         </button>
       </div>
       <div className="boxInProcess2">
-      {cities?.map(data=>
+      {cities.length >0? cities?.map(data=>
       <Card sx={{ maxWidth: 345 }} className="cardDinamic">
         <div className='flexHeader'>
       <CardHeader
@@ -108,16 +108,16 @@ const CardsDinamic = () => {
           <ShareIcon />
         </IconButton>
         
-         <LinkRouter to="/details">  
+         <LinkRouter to={`/details/${data._id}`}>  
         <button className="cardsButton"> See More...</button>
          </LinkRouter>
       </CardActions>
     </Card>
 
-)}
+): <h1>No results found</h1>}
 </div>
       
-    </div>
+</div>
   );
 }
 

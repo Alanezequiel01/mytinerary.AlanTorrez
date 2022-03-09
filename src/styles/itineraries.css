@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: cornflowerblue;
+}
+
+.card{
+    position: relative;
+    width: 80rem;
+    /* height: 400px; */
+    height: 120px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: height 0.5s ease-in-out ;
+}
+
+.card.active{
+    height: 400px;
+}
+
+.card .content{
+    display: flex;
+    align-items: center;
+}
+
+.card .content .profile{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.card .content .profile img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card .content h2{
+    margin-left: 15px;
+    font-size: 400;
+}
+
+.nav{
+    position: relative;
+    top: 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.212);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav li{    
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    color: #555;
+    font-size: 1.1rem;
+    transition: color 0.25s;
+}
+
+.nav li:hover{
+    color: #36b3ff;
+}
+
+.toggle{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+    color: white !important;
+}
+
+.toggle .icon{
+    font-size: 1.5rem;
+    transition: transform ease-in-out 0.5s;
+}
+
+.card.active .toggle .icon{
+    transform: rotate(-180deg);
+}
+
+
+/* estyles for button */
+.btn {
+    --color: #00A97F;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+   }
+   
+   .btn::after, .btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+   }
+   
+   .btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover {
+    color: var(--color2);
+   }
+   
+   .btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+   }
+
+
