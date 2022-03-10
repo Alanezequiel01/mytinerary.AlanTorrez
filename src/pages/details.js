@@ -22,7 +22,9 @@ const Details = (props) => {
   return (
     <>
     <HeroDetails/>
-    {itinerarios.length > 0 && itinerarios.map(itinerario => <Itinerary data={itinerario}/>)}
+    {itinerarios.length > 0? itinerarios.map(itinerario => <Itinerary data={itinerario}/>)
+    : <h1 className="noResults">Please excuse us, no itineraries were found for this city.</h1>
+    }
    </>
   );
 }
