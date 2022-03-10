@@ -12,6 +12,8 @@ db.itinerarios.insertMany([
 
     {
     "username": "James LaBrie",
+    "tittle": "The famous Big Ben",
+    "description": "Wow, I never thought it would be so beautiful up close...",
     "image": "james_labrie.jpg",
     "price": 4,
     "duration":"3 Hours",
@@ -22,9 +24,12 @@ db.itinerarios.insertMany([
       "#LondonCity"
       ],
     "comment":"Under Construction",
+    "id_city":"62297174c60a7dbc4f31cb25",
   },
   {
     "username": "John Petrucci",
+    "tittle": "The amazing hyde park",
+    "description": "Life outdoors is best enjoyed if you see it from here.",
     "image": "john_petrucci.jpg",
     "price": 1,
     "duration":"2",
@@ -35,9 +40,12 @@ db.itinerarios.insertMany([
       "#TravelPhotography"
       ],
     "comment":"Under Construction",
+    "id_city":"62297174c60a7dbc4f31cb25",
   },
   {
     "username": "Mike Portnoy",
+    "tittle": "Looking down from above",
+    "description": "Wow, I never thought it would be so beautiful up close...",
     "image": "mike_portnoy.jpg",
     "price": 3,
     "duration":"2 Hours",
@@ -48,9 +56,12 @@ db.itinerarios.insertMany([
       "#Travel"
       ],
     "comment":"Under Construction",
+    "id_city":"62297174c60a7dbc4f31cb26",
   },
   {
     "username": "Steve Vai",
+    "tittle": "Walk through Dubai",
+    "description": "Wow, I never thought it would be so beautiful up close...",
     "image": "steve_vai.jpg",
     "price": 5,
     "duration":"4 Hours",
@@ -61,9 +72,7 @@ db.itinerarios.insertMany([
       "#AbuDhabi"
       ],
     "comment":"Under Construction",
-  },
-  {
-    "message":"Please excuse me, this city does not have itineraries yet",
+    "id_city":"62297174c60a7dbc4f31cb26",
   },
 
 ])

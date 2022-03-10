@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "../styles/styles.css";
+import {connect} from 'react-redux';
+import citiesAction from "../redux/actions/citiesAction";
 
 //CARDS
 import Card from '@mui/material/Card';
@@ -15,49 +17,20 @@ import ShareIcon from '@mui/icons-material/Share';
 import "../styles/cardCities.css"; 
 import {Link as LinkRouter} from "react-router-dom"
 
-//DATABASE
-import axios from 'axios';
-
 //INPUT SEARCH
 import "bootstrap/dist/css/bootstrap.min.css";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSearch} from '@fortawesome/free-solid-svg-icons';
 
-const CardsDinamic = () => {
-  const [cities, setCities] = useState([]);
-  const [cardsCities, setCardsCities] = useState([]);
-  const [search, setSearch] = useState("");
-
-  const getCities= async()=>{
-    await axios.get("http://localhost:4000/api/V1/cities")
-  .then(response=>{
-    setCardsCities(response.data.response.ciudades);
-    setCities(response.data.response.ciudades);
-    }).catch(error=>{
-      console.log(error)
-    })
-  }
-
+const CardsDinamic = (props) => {
+  
   useEffect(()=>{
-    getCities()
+    props.fetchCities()
   },[])
 
-
-  const handleChange=e=>{
-    setSearch(e.target.value);
-    filter(e.target.value);
-  }
-
-  const filter=(terminoBusqueda)=>{
-    var resultadoBusqueda=cardsCities.filter((elemento)=>{
-      if(elemento.city.toString().toLowerCase().startsWith(terminoBusqueda.toLowerCase().trim())
-      || elemento.country.toString().toLowerCase().startsWith(terminoBusqueda.toLowerCase().trim())
-      ){
-        return elemento;
-      }
-    });
-    setCities(resultadoBusqueda);
-  }
+  const filtroCities = (event) =>{
+    props.filter(event.target.value, props.cities)
+  } 
 
   return (
 
@@ -65,16 +38,15 @@ const CardsDinamic = () => {
       <div className="containerInput"> 
         <input
         className="form-control inputSearch"
-        value={search}
         placeholder="Search city or country"
-        onChange={handleChange}
+        onChange={filtroCities}
         />
         <button className="btn btn-success">
         <FontAwesomeIcon icon={faSearch}/>
         </button>
       </div>
       <div className="boxInProcess2">
-      {cities.length >0? cities?.map(data=>
+      {props.citiesFilter.length >0? props.citiesFilter?.map(data=>
       <Card sx={{ maxWidth: 345 }} className="cardDinamic">
         <div className='flexHeader'>
       <CardHeader
@@ -92,7 +64,7 @@ const CardsDinamic = () => {
       <CardMedia
         component="img"
         height="194"
-        image={process.env.PUBLIC_URL+`img_ciudades/${data.image}` }
+        image={process.env.PUBLIC_URL+`img_ciudades/${data.image}`}
         alt="Image city"
       />
       <CardContent>
@@ -116,9 +88,21 @@ const CardsDinamic = () => {
 
 ): <h1>No results found</h1>}
 </div>
-      
 </div>
   );
 }
 
-export default CardsDinamic;
+const mapDispatchToProps = {
+  fetchCities: citiesAction.fetchCities,
+  filter: citiesAction.filter
+}
+
+const mapStateToProps = (state) =>{
+  
+  return{
+    cities: state.citiesReducer.cities,
+    citiesFilter: state.citiesReducer.citiesFilter,
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(CardsDinamic);

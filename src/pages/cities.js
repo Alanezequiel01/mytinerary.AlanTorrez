@@ -5,7 +5,9 @@ import CardsDinamic from '../components/cardsDinamic'
 const Cities = () => {
   
   return (
+    <>
     <CardsDinamic/>
+    </>
   );
 }
 

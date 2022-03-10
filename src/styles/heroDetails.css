@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+
+.containerHeroDetails{
+    width: 100%;
+    min-height: auto;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.700), rgba(0, 0, 0, 0.700)), url(../assets/panorama-2117310.jpg) !important;
+    background-size: initial;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+.city{
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+}
+
+.containerDinamic{
+    max-width: 35rem;
+    min-height: 30rem;
+    margin: 2rem 0;
+    padding: 3rem 3rem;
+    border-radius: 1rem;
+    background-color: rgba(81, 187, 155, 0);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 0.9rem;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.imgBandera{
+    width: 150px;
+    border-radius: 10px;
+}
+
+.lenguajePais{
+    display: flex;
+    align-items: center;
+}
+
+.monedaPais{
+    display: flex;
+    align-items: center;
+}
+
+.imgLogos{
+    width: 80px;
+    margin-right: 1rem;
+}

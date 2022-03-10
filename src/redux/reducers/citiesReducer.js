@@ -1,19 +1,38 @@
 const initialState = {
-    cities:[],
-    aux:[]      
-}
+  cities: [],
+  aux: [],
+  citiesFilter: [],
+  city: [],
+};
 
 const citiesReducer = (state = initialState, action) => {
 
-    switch(action.type){
-        case 'fetch':
-            return {
-                ...state,
-                cities: action.payload,
-                aux: action.payload,
-            }
+  switch (action.type) {
+    case "fetch":
+      return {
+        ...state,
+        cities: action.payload,
+        aux: action.payload,
+        citiesFilter: action.payload,
+      };
 
-        case 'delete':
+    case "filter":
+      const filter = action.payload.cities.filter((cities) =>
+        cities.city.toLowerCase().startsWith(action.payload.value.toLowerCase().trim())
+      );
+
+      return {
+        ...state,
+        citiesFilter: filter,
+      };
+
+    case "fetchOne":
+      return {
+        ...state,
+        city: action.payload
+      };
+
+    /* case 'delete':
             return {
                 ...state,
                 cities: action.payload,
@@ -26,21 +45,11 @@ const citiesReducer = (state = initialState, action) => {
                 ...state,
                 cities,
                 aux:[...cities]
-            }    
+            }  */
 
-        case 'filtro':
-            const filtrado = action.payload.cities.filter((cities) => 
-            cities.city.toLowerCase()
-            )
+    default:
+      return state;
+  }
+};
 
-            return{
-                ...state,
-                cities: filtrado
-            }
-        default:
-            return state    
-                
-    }
-}
-
-export default citiesReducer
+export default citiesReducer;

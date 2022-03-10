@@ -1,10 +1,14 @@
-import React, {useEffect} from 'react'
+import React, { useEffect, useState } from 'react'
 import "../styles/itineraries.css";
-import ProfileImg from "../assets/john_petrucci.jpg"
+import Like from "../assets/heart.png"
+import Cash from "../assets/money.png"
 import {ChevronDownOutline} from 'react-ionicons'
+import {connect} from 'react-redux'
+import itinerariesAction from "../redux/actions/itinerariesAction"
     
 
-const Itinerary = () => {
+const Itinerary = ({data}) => {
+
     let card;
 
     useEffect(()=>{
@@ -18,24 +22,31 @@ const Itinerary = () => {
 
     return(
         <div className="body">
-
         <div className="card">
             <div className="content">
                 <div className="profile">
-                <img src={ProfileImg} className="Profile Img"/>
+                <img src={process.env.PUBLIC_URL+`/img_itinerarios/${data.image}`} className="Profile Img"/>
                 </div>
-                <h2>John Petrucci</h2>
+                <div className="tittles">
+                    <h2>{data.username}</h2>
+                    <h2>{data.tittle}</h2>
+                </div>
+                <div className="hashAndDesc">
+                <p className="desc">{data.description}</p>
+                <p className="hash">{data.hashtags}</p>
+                </div>
+                <div className="icons">
+                    <h3>{data.likes}<img src={Like} className="iconLike"/></h3>
+                    <p><img src={Cash} className="iconLike"/>
+                    <img src={Cash} className="iconLike"/></p>
+
+                </div>
             </div>
-            <ul className="nav">
-                <li>• Index</li>
-                <li>• Edti Profile</li>
-                <li>• Settings</li>
-                <li>• Support</li>
-            </ul>
+            <div className="nav">
+                <h1>Under Construction</h1>
+            </div>
             <div className="toggle">
-                <button class="btn">
                     <ChevronDownOutline onClick={dropdown} className='icon'/>
-                </button>
             </div>
         </div>
         </div>
@@ -43,4 +54,17 @@ const Itinerary = () => {
 
 }
 
-export default Itinerary
+const mapDispatchToProps={
+    fetchItineraries: itinerariesAction.fetchItineraries,
+    fetchOneItinerary: itinerariesAction.fetchOneItinerary
+  }
+  
+  const mapStateToProps = (state) =>{
+  
+    return{
+      itineraries: state.itinerariesReducer.itineraries,
+    }
+  }
+  
+  export default connect(mapStateToProps, mapDispatchToProps) (Itinerary);
+  
