@@ -20,7 +20,6 @@ const userAction = {
     signInUser:(userData) =>{
         return async(dispatch,getState) => {
             const user = await axios.post('http://localhost:4000/api/V1/auth/signIn', {userData})
-            console.log(user.data)
             if(user.data.success){
                 localStorage.setItem('token', user.data.response.token)
                 dispatch({type: 'user', payload: user.data.response.userData})

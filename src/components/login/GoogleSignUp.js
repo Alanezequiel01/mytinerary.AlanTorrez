@@ -14,7 +14,7 @@ function GoogleSignUp(props) {
             password: res.profileObj.googleId,
             confirmPassword: res.profileObj.googleId,
             urlImage: res.profileObj.imageUrl,
-            country: "hola",
+            country: "undefined",
             from: "google",
         }
         console.log(res.profileObj)
@@ -25,7 +25,7 @@ function GoogleSignUp(props) {
         <GoogleLogin
             className="buttonsocial"
             clientId="971845975096-a3gu832l2esbdv2dmp2iktvql4t5imot.apps.googleusercontent.com"
-            buttonText="SignUp with Google"
+            buttonText="Sign Up with Google"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
             cookiePolicy={'single_host_origin'}

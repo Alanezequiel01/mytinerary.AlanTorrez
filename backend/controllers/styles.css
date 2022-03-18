@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Pragati+Narrow&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.containerMessage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2.5rem;
+}
+
+.button{
+    text-decoration: none;
+    margin-top: .5rem;
+    padding: 0 1rem;
+    border-radius: 10px;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 5px;
+    transition: 500ms;
+    font-size: 1.5rem;
+    background-color: #03B5AA;
+}
+
+.button:hover{
+    color: white;
+}
+
+.nombreLogin{
+    font-family: 'Oooh Baby', cursive !important;
+    color: #03B5AA;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }

@@ -15,6 +15,8 @@
     border: 1px solid gray;
     background-color: white;
     border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.4);
 }
 
 .miniLogo{
@@ -75,7 +77,17 @@
 .formSignUp{
     width: 25rem;
     padding: 1.5rem;
+    margin: 1rem;
     border: 1px solid gray;
     background-color: white;
     border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.4);
 }
+
+.nombreLogin{
+    font-family: 'Oooh Baby', cursive !important;
+    color: #03B5AA;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+  }

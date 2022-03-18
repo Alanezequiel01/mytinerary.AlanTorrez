@@ -20,8 +20,30 @@ const sendEmail = async (email, uniqueString) => {
     let mailOptions = {
         from: sender,
         to: email, 
-        subject: "User email verification for registration in mytinerary",
-        html: `Press <a href=http://localhost:4000/api/V1/verify/${uniqueString}>"here"</a> to confirm your email. Thank you`,
+        subject: "User email verification for registration in MyTinerary",
+        html: ` 
+            <div 
+            style="
+            display: flex;
+            flex-direction: column;
+            line-height: 2.5rem;">
+                <h3>Hello! You have successfully signed up in <span style="font-family: 'Oooh Baby', cursive !important;
+                color: #03B5AA;
+                margin-bottom: 1rem;
+                font-size: 2rem;"> MyTinerary</span></h3>
+                <p>Please press the button to confirm your account.</p>
+                <a href="http://localhost:4000/api/V1/verify/${uniqueString}" style="text-decoration: none;
+                margin-top: .5rem;
+                padding: 0 1rem;
+                border-radius: 10px;
+                color: black;
+                border: 1px solid gray;
+                border-radius: 5px;
+                transition: 500ms;
+                font-size: 1.5rem;
+                background-color: #03B5AA;"><h5>Confirm Account</h5></a>
+            </div>
+        `,
     };
     await transporter.sendMail(mailOptions, function (error, response) {
         if(error){

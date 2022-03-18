@@ -24,8 +24,8 @@ const SignIn = (props) => {
 
   return (
     <div className="containerSignIn">
-      <h2>LogIn in MyTinerary</h2>
-        <p>Don't have an account? <LinkRouter to={"/signUp"} className="signUpButton">Create a new account!</LinkRouter></p>
+      <h2><span className="nombreLogin">Log in MyTinerary</span></h2>
+        <p>¿Don't have an account? <LinkRouter to={"/signUp"} className="signUpButton">Create a new account!</LinkRouter></p>
         <div className="containerGoogle">
         <GoogleSignIn />
         </div>
@@ -47,7 +47,7 @@ const SignIn = (props) => {
         </Form.Group>
         <div className="submitContainer">
         <Button variant="primary" type="submit" className="submitButton">
-          LogIn
+          Log In
         </Button>
         </div>
       </Form>

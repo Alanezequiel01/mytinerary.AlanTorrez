@@ -36,11 +36,11 @@ const SignUp = (props) => {
   return (
     <div className="containerSignUp">
       <Snackbar/>
-      <h2>Create a new account!</h2>
+      <h2><span className="nombreLogin">Create a new account!</span></h2>
       <p>
-        Do you already have an account?{" "}
+        ¿Do you already have an account?{" "}
         <LinkRouter to={"/signIn"} className="signUpButton">
-          LogIn!
+          Log In!
         </LinkRouter>
       </p>
         <div className="containerGoogle">

@@ -4,11 +4,16 @@
 .containerHeroDetails{
     width: 100%;
     min-height: auto;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.700), rgba(0, 0, 0, 0.700)), url(../assets/panorama-2117310.jpg) !important;
     background-size: initial;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+  }
+
+  .containerHeroDetails2{
+    width: 100%;
+    min-height: auto;
+    background-color: rgba(0, 0, 0, 0.459) !important;
     display: flex;
     justify-content: space-around;
     align-items: center;

@@ -8,11 +8,9 @@ import { useParams } from 'react-router-dom';
 
 const Details = (props) => {
   const {id} = useParams()
-  console.log(id)
 
   const dispatch = useDispatch()
   const itinerarios = useSelector(store => store.itinerariesReducer.itinerariesCity)
-  console.log(itinerarios)
   
   useEffect(()=>{
     dispatch(itinerariesAction.fetchItineraryForCity(id))

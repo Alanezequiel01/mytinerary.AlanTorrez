@@ -10,7 +10,6 @@ function HeroDetails (props) {
 
   const [reload, setReload] = useState(false)
   const {id} = useParams()
-  console.log(id)
 
   useEffect(()=>{
     setReload(!reload)
@@ -19,11 +18,10 @@ function HeroDetails (props) {
   useEffect(()=>{
     props.fetchOneCity(id)
   },[reload])
-
-console.log(props.data)
   
   return (
-    <div className="containerHeroDetails">
+    <div className="containerHeroDetails" style={{backgroundImage:`url('${process.env.PUBLIC_URL}/img_ciudades/${props.data?.image}')` }}>
+      <div className='containerHeroDetails2'>
         <h1 className="city"> <b>{props.data?.city}</b></h1>
       <div className="containerDinamic">
             <img src={process.env.PUBLIC_URL+`/img_banderas/${props.data?.flag}`} className="imgBandera"/>
@@ -35,6 +33,7 @@ console.log(props.data)
             <img src={Moneda} className="imgLogos"/>
             <h1 className="nombreidioma">{props.data?.money}</h1>
             </div>
+      </div>
       </div>
     </div>
   );

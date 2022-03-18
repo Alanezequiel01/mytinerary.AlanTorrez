@@ -6,7 +6,6 @@ const citiesAction = {
         return async(dispatch,getState) => {
             const res = await axios.get('http://localhost:4000/api/V1/cities')
             dispatch({type:"fetch", payload:res.data.response.ciudades})
-            console.log(res)
         }
     },
     
@@ -20,7 +19,6 @@ const citiesAction = {
         return async (dispatch, getState) =>{
             try{const res = await axios.get(`http://localhost:4000/api/V1/cities/${id}`)
             dispatch({type:"fetchOne", payload:res.data.response.ciudades})
-            console.log(res.data.response.ciudades)
         }
         catch(err){
             console.log(err)

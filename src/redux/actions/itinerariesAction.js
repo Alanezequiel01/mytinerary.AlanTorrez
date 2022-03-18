@@ -21,7 +21,6 @@ const itinerariesAction = {
         return async (dispatch, getState) =>{
             try{
                 const res = await axios.get(`http://localhost:4000/api/V1/itineraries/`+id)
-                console.log(res)
                 dispatch({type: 'fetchForCity', payload: res.data.response})
             }
             catch(err){
