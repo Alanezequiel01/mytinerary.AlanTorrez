@@ -2,7 +2,7 @@ import React, {useEffect}from 'react'
 import "../styles/styles.css";
 import HeroDetails from '../components/heroDetails';
 import Itinerary from '../components/itineraries';
-import {connect, useSelector, useDispatch} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
 import itinerariesAction from "../redux/actions/itinerariesAction"
 import { useParams } from 'react-router-dom';
 

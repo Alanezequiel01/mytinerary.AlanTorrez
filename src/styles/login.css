@@ -1,0 +1,81 @@
+/* Styles for SignIn page */
+
+.containerSignIn{
+    width: 100%;
+    min-height: 62.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formSignIn{
+    width: 22rem;
+    padding: 1.5rem;
+    border: 1px solid gray;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.miniLogo{
+    width: 30px;
+    height: 30px;
+    margin-right: .5rem;
+}
+
+.containerGoogle{
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.googleButton{
+    padding: .2rem .5rem;
+    border: 1px solid gray;
+    color: gray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mesagge{
+    margin: 0;
+}
+
+.submitContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitButton{
+    width: 90%;
+}
+
+.singUpButton{
+    color: rgb(20, 42, 136);
+    text-decoration: underline;
+}
+
+
+/* Styles for SignUp page */
+
+.containerSignUp{
+    width: 100%;
+    min-height: 62.5vh;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formSignUp{
+    width: 25rem;
+    padding: 1.5rem;
+    border: 1px solid gray;
+    background-color: white;
+    border-radius: 5px;
+}

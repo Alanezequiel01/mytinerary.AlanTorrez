@@ -1,7 +1,7 @@
 const initialState = {
     itineraies: [],
     aux: [],
-    itinerariesCity: ["hola"],
+    itinerariesCity: [],
   };
   
   const itinerariesReducer = (state = initialState, action) => {

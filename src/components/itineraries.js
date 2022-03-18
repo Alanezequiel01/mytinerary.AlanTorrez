@@ -54,17 +54,5 @@ const Itinerary = ({data}) => {
 
 }
 
-const mapDispatchToProps={
-    fetchItineraries: itinerariesAction.fetchItineraries,
-    fetchOneItinerary: itinerariesAction.fetchOneItinerary
-  }
-  
-  const mapStateToProps = (state) =>{
-  
-    return{
-      itineraries: state.itinerariesReducer.itineraries,
-    }
-  }
-  
-  export default connect(mapStateToProps, mapDispatchToProps) (Itinerary);
+  export default Itinerary;
   

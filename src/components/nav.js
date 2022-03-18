@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useEffect}from 'react'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -14,9 +14,15 @@ import MenuItem from '@mui/material/MenuItem';
 import "../styles/styles.css"
 import {Link as LinkRouter} from "react-router-dom"
 
-const settings = ['Login', 'Register'];
+import {connect} from 'react-redux';
+import userAction from '../redux/actions/userAction';
 
-const NavBar = () => {
+const NavBar = (props) => {
+
+  function SignOut() {
+		props.signOutUser(props.user.email)
+	}
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -108,7 +114,8 @@ const NavBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                {!props.user ?<Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" /> : 
+                <img src={props.user.urlImage} alt="User Image" className='userImage'/>}
               </IconButton>
             </Tooltip>
             <Menu
@@ -127,11 +134,24 @@ const NavBar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
+              
+              {!props.user ?
+              <>
+              <MenuItem>
+              <LinkRouter to="signUp" className="linkResponsive">Sign Up</LinkRouter>
+              </MenuItem>
+              <MenuItem>
+              <LinkRouter to="signIn" className="linkResponsive">Sign In</LinkRouter>
+              </MenuItem>
+              </>
+              :
+              <>
+              <MenuItem>
+              <LinkRouter to="signOut" className="linkResponsive" onClick={SignOut}>Sign Out</LinkRouter>
+              </MenuItem>
+              </>
+              }
+              
             </Menu>
           </Box>
         </Toolbar>
@@ -139,4 +159,16 @@ const NavBar = () => {
     </AppBar>
   );
 };
-export default NavBar;
+
+const mapStateToProps = (state) =>{
+  
+  return{
+    user: state.userReducer.user 
+  }
+}
+
+const mapDispatchToProps = {
+  signOutUser: userAction.signOutUser,
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
