@@ -62,7 +62,6 @@ const userController = {
         const {uniqueString} = req.params; 
 
         const user = await Users.findOne({uniqueString: uniqueString})
-        /* console.log(user) */
         if (user) {
             user.verifiedEmail = true 
             await user.save()
@@ -83,7 +82,6 @@ const userController = {
             const usuarioExiste = await Users.findOne({email})
             
             if(usuarioExiste){
-                console.log(usuarioExiste.from.indexOf(from))
                 if(usuarioExiste.from.indexOf(from) !== -1){
                     res.json({
                         success: false,
@@ -130,7 +128,6 @@ const userController = {
                     verifiedEmail:false,
                     from:[from],
                 })
-                console.log(from)
                 if(from !== "signUp"){
                     await nuevoUsuario.save()
                     res.json({
@@ -259,7 +256,6 @@ const userController = {
         },
 
         verifyToken:(req, res) => {
-            console.log(req.user)
             if(!req.err){
             res.json({success:true,
                       response:{id:req.user.id, 

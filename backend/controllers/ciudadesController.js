@@ -37,7 +37,6 @@ const ciudadesController = {
     },
 
     cargarCiudad: async(req,res)=>{
-        console.log(req.body)
         const {ciudad, pais, descripcion, imagen, fecha} = req.body.dataInput
         new Ciudades({country:ciudad, 
                      city:pais,
@@ -59,7 +58,6 @@ const ciudadesController = {
         const ciudad = req.body.dataInput
 
         let ciudadb = await Ciudades.findOneAndUpdate({_id:id}, ciudad)
-         console.log(ciudadb)
 
     }
 }

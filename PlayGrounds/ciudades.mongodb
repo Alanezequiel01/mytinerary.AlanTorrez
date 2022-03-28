@@ -11,14 +11,14 @@ db.ciudades.drop();
 db.ciudades.insertMany([
 
     {
-    "country":"Egypt",
-    "city":"Kom Ombo",
-    "description":"Today Kom Ombo may be a sleepy agricultural backwater surrounded by sugar cane fields, but this temple dedicated to the gods Sobek and Haroeris is a reminder of this area's importance in Ancient Egypt due to its prime position along the Nile.",
-    "image":"egipto_kom_ombo.jpg",
-    "date":"August 30, 2020",
-    "flag":"egipto.png",
-    "language":"Arabic",
-    "money":"Egyptian pound",
+    "country":"Argentina",
+    "city":"Mendoza",
+    "description":"Mendoza is a city in Argentina’s Cuyo region and the heart of Argentina's wine country, famed for Malbecs and other red wines. Its many bodegas (wineries) offer tastings and tours.",
+    "image":"argentina_mendoza.jpg",
+    "date":"October 18, 2016",
+    "flag":"argentina.png",
+    "language":"Spanish",
+    "money":"Argentine Peso",
     },
 
     {
@@ -165,14 +165,14 @@ db.ciudades.insertMany([
     },
 
     {
-    "country":"Argentina",
-    "city":"Mendoza",
-    "description":"Mendoza is a city in Argentina’s Cuyo region and the heart of Argentina's wine country, famed for Malbecs and other red wines. Its many bodegas (wineries) offer tastings and tours.",
-    "image":"argentina_mendoza.jpg",
-    "date":"October 18, 2016",
-    "flag":"argentina.png",
-    "language":"Spanish",
-    "money":"Argentine Peso",
+    "country":"Egypt",
+    "city":"Kom Ombo",
+    "description":"Today Kom Ombo may be a sleepy agricultural backwater surrounded by sugar cane fields, but this temple dedicated to the gods Sobek and Haroeris is a reminder of this area's importance in Ancient Egypt due to its prime position along the Nile.",
+    "image":"egipto_kom_ombo.jpg",
+    "date":"August 30, 2020",
+    "flag":"egipto.png",
+    "language":"Arabic",
+    "money":"Egyptian pound",
     },
 
     {

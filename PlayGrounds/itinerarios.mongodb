@@ -11,20 +11,57 @@ db.itinerarios.drop();
 db.itinerarios.insertMany([
 
     {
+    "username": "Jordan Ruddess",
+    "tittle": "City of San Rafael",
+    "description": "Wow, I never thought it would be so beautiful up close...",
+    "image": "jordan_ruddess.jpg",
+    "price": 2,
+    "duration":"2 Hours",
+    "likes":[],
+    "hashtags":[
+      "#VisitMendoza", 
+      "#ILoveMendoza",
+      "#Argentina"
+      ],
+    "comment":[
+      "comment":
+      "userId"
+    ],
+    "id_city":"623aaf2cdfb927af99f0f827",
+  },
+
+    {
+    "username": "Mike Mangini",
+    "tittle": "City of Godoy Cruz",
+    "description": "Wow, I never thought it would be so beautiful up close...",
+    "image": "mike_mangini.jpg",
+    "price": 1
+    "duration":"1 Hours",
+    "likes":[],
+    "hashtags":[
+      "#GodoyCruz", 
+      "#Mendoza",
+      "#Moutains"
+      ],
+    "comment":"Under Construction",
+    "id_city":"623aaf2cdfb927af99f0f827",
+  },
+
+    {
     "username": "James LaBrie",
     "tittle": "The famous Big Ben",
     "description": "Wow, I never thought it would be so beautiful up close...",
     "image": "james_labrie.jpg",
     "price": 4,
     "duration":"3 Hours",
-    "likes":0,
+    "likes":[],
     "hashtags":[
       "#VisitLondon", 
       "#Uk",
       "#LondonCity"
       ],
     "comment":"Under Construction",
-    "id_city":"62297174c60a7dbc4f31cb25",
+    "id_city":"623aaf2cdfb927af99f0f828",
   },
   {
     "username": "John Petrucci",
@@ -33,14 +70,14 @@ db.itinerarios.insertMany([
     "image": "john_petrucci.jpg",
     "price": 1,
     "duration":"2",
-    "likes":0,
+    "likes":[],
     "hashtags":[
       "#LondonLife",
       "#LoveLondon",
       "#TravelPhotography"
       ],
     "comment":"Under Construction",
-    "id_city":"62297174c60a7dbc4f31cb25",
+    "id_city":"623aaf2cdfb927af99f0f828",
   },
   {
     "username": "Mike Portnoy",
@@ -49,14 +86,14 @@ db.itinerarios.insertMany([
     "image": "mike_portnoy.jpg",
     "price": 3,
     "duration":"2 Hours",
-    "likes":0,
+    "likes":[],
     "hashtags":[
       "#Dubai",
       "#Emirates",
       "#Travel"
       ],
     "comment":"Under Construction",
-    "id_city":"62297174c60a7dbc4f31cb26",
+    "id_city":"623aaf2cdfb927af99f0f829",
   },
   {
     "username": "Steve Vai",
@@ -65,14 +102,14 @@ db.itinerarios.insertMany([
     "image": "steve_vai.jpg",
     "price": 5,
     "duration":"4 Hours",
-    "likes":0,
+    "likes":[],
     "hashtags":[
       "#DubaiLifeStyle",
       "#BurjKhalifa", 
       "#AbuDhabi"
       ],
     "comment":"Under Construction",
-    "id_city":"62297174c60a7dbc4f31cb26",
+    "id_city":"623aaf2cdfb927af99f0f829",
   },
 
 ])

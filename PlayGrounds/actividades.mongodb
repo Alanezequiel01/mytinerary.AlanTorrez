@@ -1,0 +1,121 @@
+// MongoDB Playground
+//https://docs.mongodb.com/manual/crud/
+const database = 'MyTinerary';
+
+
+use(database);
+
+// The drop() command destroys all data from a collection.
+db.actividades.drop();
+// Inserta los documentos que nosotros le indiquemos.
+db.actividades.insertMany([
+
+  {
+    "tittle": "San Martín Plaza",
+    "image": "san_martin.jpg",
+    "id_itinerary":"623ab01b208b01bb05f36e0d",
+  },
+
+  {
+    "tittle": "Railway Museum",
+    "image": "museo_ferroviario.jpg",
+    "id_itinerary":"623ab01b208b01bb05f36e0d",
+  },
+
+  {
+    "tittle": "Francia Plaza",
+    "image": "plaza_francia.jpg",
+    "id_itinerary":"623ab01b208b01bb05f36e0d", 
+  },
+
+  {
+    "tittle": "Mitre Park",
+    "image": "parque_mitre.jpg",
+    "id_itinerary":"623ab01b208b01bb05f36e0e",
+  },
+
+  {
+    "tittle": "Godoy Cruz Plaza",
+    "image": "godoy_cruz.jpg",
+    "id_itinerary":"623ab01b208b01bb05f36e0e",
+  },
+
+  {
+    "tittle": "Olive Bridge",
+    "image": "puente_olive.jpg",
+    "id_itinerary":"623ab01b208b01bb05f36e0e", 
+  },
+
+  {
+    "tittle": "British Parliament",
+    "image": "parlamento_britanico.jpg",
+    "id_itinerary":"623ab01b208b01bb05f36e0f",
+  },
+
+  {
+    "tittle": "Westminster Cathedral",
+    "image": "catedral_westminster.jpg",
+    "id_itinerary":"623ab01b208b01bb05f36e0f",
+  },
+
+  {
+    "tittle": "Tower Bridge London",
+    "image": "puente_londres.jpg",
+    "id_itinerary":"623ab01b208b01bb05f36e0f",  
+  },
+
+  {
+    "tittle": "Hyde Park",
+    "image": "hyde_park.jpg",
+    "id_itinerary":"623ab01b208b01bb05f36e10",
+  },
+
+  {
+    "tittle": "Kensington Palace",
+    "image": "palacio_kensington",
+    "id_itinerary":"623ab01b208b01bb05f36e10",
+  },
+
+  {
+    "tittle": "Covent Garden",
+    "image": "covent_garden.jpg",
+    "id_itinerary":"623ab01b208b01bb05f36e10",  
+  },
+
+  {
+    "tittle": "Burj Khalifa",
+    "image": "burj_khalifa.jpg",
+    "id_itinerary":"623ab01b208b01bb05f36e11",
+  },
+
+  {
+    "tittle": "Burj Al Arab",
+    "image": "burj_arab.jpg",
+    "id_itinerary":"623ab01b208b01bb05f36e11",
+  },
+
+  {
+    "tittle": "Dubai Mall",
+    "image": "dubai_mall.jpg",
+    "id_itinerary":"623ab01b208b01bb05f36e11",  
+  },
+
+  {
+    "tittle": "Dubai Miracle Garden",
+    "image": "miracle_garden.jpg",
+    "id_itinerary":"623ab01b208b01bb05f36e12",
+  },
+
+  {
+    "tittle": "Dubai Museum",
+    "image": "museo_dubai.jpg",
+    "id_itinerary":"623ab01b208b01bb05f36e12",
+  },
+
+  {
+    "tittle": "Legoland® Dubai",
+    "image": "legoland_dubai.jpg",
+    "id_itinerary":"623ab01b208b01bb05f36e12",
+  },
+
+])

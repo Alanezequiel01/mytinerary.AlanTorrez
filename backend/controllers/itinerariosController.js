@@ -2,7 +2,7 @@ const Itinerarios = require('../models/itinerarios')
 
 const itinerariosController = {
 
-    obtenerItinerarios: async (req, res)=>{
+    obtenerItinerarios: async (req, res) => {
         let itinerarios
         let error = null
 
@@ -40,6 +40,9 @@ const itinerariosController = {
     obtenerItinerarioPorId: async (req, res) =>{
         const id = req.params.id
 
+        console.log("holaaaaaaaaaaaa")
+        
+
         let itinerario
         let error = null
 
@@ -54,6 +57,29 @@ const itinerariosController = {
             error: error
         })
     },
+
+    likeDislike:async (req,res) =>{
+        const id=req.params.id 
+        const user = req.user.id 
+
+       await  Itinerarios.findOne({_id: id})
+
+        .then((itinerario) =>{
+            console.log(itinerario)
+            if(itinerario.likes.includes(user)){
+                Itinerarios.findOneAndUpdate({_id:id}, {$pull:{likes:user}},{new:true})
+               .then((response)=> res.json({success:true, response:response.likes}))
+               .catch((error) => console.log(error))
+            }else{
+                Itinerarios.findOneAndUpdate({_id: id}, {$push:{likes:user}},{new:true})
+                .then((response) => res.json({success:true, response:response.likes}))
+                .catch((error) => console.log(error))
+            }
+        })
+        .catch((error) => res.json({success:false, response:error}))
+    },
+
+
 
 }
 

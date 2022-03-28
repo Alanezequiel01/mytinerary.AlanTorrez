@@ -18,9 +18,11 @@ const itinerariesAction = {
     },
 
     fetchItineraryForCity: (id) =>{
+        console.log(id)
         return async (dispatch, getState) =>{
             try{
                 const res = await axios.get(`http://localhost:4000/api/V1/itineraries/`+id)
+                console.log(res)
                 dispatch({type: 'fetchForCity', payload: res.data.response})
             }
             catch(err){
@@ -28,6 +30,24 @@ const itinerariesAction = {
             }
         }
     },
+
+    likeDislike: (itineraryId) => {
+        const token = localStorage.getItem('token')
+        return async () => {
+            try {
+                let response = await axios.put(`http://localhost:4000/api/V1/like/${itineraryId}`, {},
+                {headers: {
+                    Authorization: "Bearer "+token
+                    }
+                })
+                console.log(response)
+                return response
+                
+            }catch (error) {
+                console.log(error)
+            }
+        }
+    }
 
 }
 
