@@ -65,7 +65,7 @@ const userController = {
         if (user) {
             user.verifiedEmail = true 
             await user.save()
-            res.redirect("http://localhost:3000/") 
+            res.redirect("https://mytinerary-torrez-alan.herokuapp.com/") 
         }
         else { res.json({
             success: false,
