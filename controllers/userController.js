@@ -32,7 +32,7 @@ const sendEmail = async (email, uniqueString) => {
                 margin-bottom: 1rem;
                 font-size: 2rem;"> MyTinerary</span></h3>
                 <p>Please press the button to confirm your account.</p>
-                <a href="http://localhost:4000/api/V1/verify/${uniqueString}" style="text-decoration: none;
+                <a href="https://mytinerary-torrez-alan.herokuapp.com/api/V1/verify/${uniqueString}" style="text-decoration: none;
                 margin-top: .5rem;
                 padding: 0 1rem;
                 border-radius: 10px;

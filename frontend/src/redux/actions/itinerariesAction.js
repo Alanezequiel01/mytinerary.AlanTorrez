@@ -4,7 +4,7 @@ const itinerariesAction = {
 
     fetchItineraries:() =>{
         return async(dispatch,getState) => {
-            const res = await axios.get(`http://localhost:4000/api/V1/itineraries`)
+            const res = await axios.get(`https://mytinerary-torrez-alan.herokuapp.com/api/V1/itineraries`)
             dispatch({type: 'fetch' ,payload:res.data.response.itinerarios})
         }
     },
@@ -12,7 +12,7 @@ const itinerariesAction = {
 
     fetchOneItinerary: (id) =>{
         return async (dispatch, getState) =>{
-            const res = await axios.get(`http://localhost:4000/api/V1/itineraries`)
+            const res = await axios.get(`https://mytinerary-torrez-alan.herokuapp.com/api/V1/itineraries`)
             dispatch({type: 'fetchOne', payload: res.data.response.itineraries})
         }
     },
@@ -20,7 +20,7 @@ const itinerariesAction = {
     fetchItineraryForCity: (id) =>{
         return async (dispatch, getState) =>{
             try{
-                const res = await axios.get(`http://localhost:4000/api/V1/itineraries/`+id)
+                const res = await axios.get(`https://mytinerary-torrez-alan.herokuapp.com/api/V1/itineraries/`+id)
                 dispatch({type: 'fetchForCity', payload: res.data.response})
             }
             catch(err){
@@ -33,7 +33,7 @@ const itinerariesAction = {
         const token = localStorage.getItem('token')
         return async () => {
             try {
-                let response = await axios.put(`http://localhost:4000/api/V1/like/${itineraryId}`, {},
+                let response = await axios.put(`https://mytinerary-torrez-alan.herokuapp.com/api/V1/like/${itineraryId}`, {},
                 {headers: {
                     Authorization: "Bearer "+token
                     }

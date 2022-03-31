@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.224561e3.css",
+    "main.js": "/static/js/main.cfb72601.js",
+    "static/js/787.d270b92e.chunk.js": "/static/js/787.d270b92e.chunk.js",
+    "static/media/panorama-2117310.jpg": "/static/media/panorama-2117310.74344d9bb3f5a3241f3a.jpg",
+    "static/media/globo.png": "/static/media/globo.778f8845492d4fae57ca.png",
+    "static/media/valija.png": "/static/media/valija.ac3eb3a0c4a5ce9c9b27.png",
+    "static/media/sinResultados.png": "/static/media/sinResultados.64e7a042052ef2cfc050.png",
+    "static/media/moneda.png": "/static/media/moneda.784013c3d490836b7093.png",
+    "static/media/nubeItinerarios.png": "/static/media/nubeItinerarios.e24da3e94a989d319198.png",
+    "static/media/avion1.jpg": "/static/media/avion1.715a4967479aa9b66de2.jpg",
+    "static/media/avion2.jpg": "/static/media/avion2.243b360689d23eccf032.jpg",
+    "static/media/whatsapp.png": "/static/media/whatsapp.fdd4b7007148bcf6ce48.png",
+    "static/media/idioma.png": "/static/media/idioma.576b566ff4579dd63a7c.png",
+    "static/media/user.png": "/static/media/user.bf2aa57c354883cb76fd.png",
+    "static/media/remove.png": "/static/media/remove.a6fd29509719f079bfd7.png",
+    "static/media/youtube.png": "/static/media/youtube.4ad78c4004874a182b12.png",
+    "static/media/facebook.png": "/static/media/facebook.b293d5363351752caf25.png",
+    "static/media/edit.png": "/static/media/edit.0f46e2728eb984e21ce8.png",
+    "index.html": "/index.html",
+    "main.224561e3.css.map": "/static/css/main.224561e3.css.map",
+    "main.cfb72601.js.map": "/static/js/main.cfb72601.js.map",
+    "787.d270b92e.chunk.js.map": "/static/js/787.d270b92e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.224561e3.css",
+    "static/js/main.cfb72601.js"
+  ]
+}

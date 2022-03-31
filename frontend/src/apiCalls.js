@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const  getCities = async () => {
     try {
-        let data = await axios.get(`http://localhost:4000/api/V1/cities`)
+        let data = await axios.get(`https://mytinerary-torrez-alan.herokuapp.com/api/V1/cities`)
         
         return data
     }
@@ -13,7 +13,7 @@ export const  getCities = async () => {
 export const  cargarDatos = async (dataInput) => {
     console.log(dataInput)
     try {
-        let data = await axios.post(`http://localhost:4000/api/V1/cities`,{dataInput})
+        let data = await axios.post(`https://mytinerary-torrez-alan.herokuapp.com/api/V1/cities`,{dataInput})
         return data
     }
     catch (error) {
@@ -24,7 +24,7 @@ export const  cargarDatos = async (dataInput) => {
 export const  eliminarCiudad = async (id) => {
     console.log(id)
     try {
-        let data = await axios.delete(`http://localhost:4000/api/V1/cities/${id}`)
+        let data = await axios.delete(`https://mytinerary-torrez-alan.herokuapp.com/api/V1/cities/${id}`)
         return data
     }
     catch (error) {
@@ -34,7 +34,7 @@ export const  eliminarCiudad = async (id) => {
 export const  modificarCiudad = async (id,dataInput) => {
     console.log(id, dataInput)
     try {
-        let data = await axios.put(`http://localhost:4000/api/V1/cities/${id}`, {dataInput})
+        let data = await axios.put(`https://mytinerary-torrez-alan.herokuapp.com/api/V1/cities/${id}`, {dataInput})
         return data
     }
     catch (error) {

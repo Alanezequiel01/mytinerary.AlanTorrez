@@ -4,7 +4,7 @@ const citiesAction = {
 
     fetchCities:() =>{
         return async(dispatch,getState) => {
-            const res = await axios.get('http://localhost:4000/api/V1/cities')
+            const res = await axios.get('https://mytinerary-torrez-alan.herokuapp.com/api/V1/cities')
             dispatch({type:"fetch", payload:res.data.response.ciudades})
         }
     },
@@ -17,7 +17,7 @@ const citiesAction = {
 
     fetchOneCity: (id) =>{
         return async (dispatch, getState) =>{
-            try{const res = await axios.get(`http://localhost:4000/api/V1/cities/${id}`)
+            try{const res = await axios.get(`https://mytinerary-torrez-alan.herokuapp.com/api/V1/cities/${id}`)
             dispatch({type:"fetchOne", payload:res.data.response.ciudades})
         }
         catch(err){
