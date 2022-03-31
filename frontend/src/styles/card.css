@@ -1,0 +1,28 @@
+/* Estilos cards */
+.carta{
+  width: 100% !important;
+  height: 100% !important; 
+  background-color: rgba(0, 0, 0, 0.294) !important;
+}
+
+.imagenCiudad{
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.294) !important;
+  z-index: -2;
+}
+
+.textCard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem !important;
+}

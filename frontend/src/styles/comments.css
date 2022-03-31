@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Pragati+Narrow&display=swap');
+
+.cardComments{
+    padding: .7rem 1rem;
+    height: 8rem;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 0px;
+}
+
+.card-header{
+    padding: 0 0 .5rem 0 !important;
+    border: none;
+    color: rgb(60, 65, 134);
+}
+
+
+.card-body{
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem 1rem 0;
+}
+
+.card-text{
+    width: 62rem;
+    height: 2.5rem;
+    resize: none;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    padding: .5rem;
+}
+
+.card-header{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 0;
+}
+
+.imgUser{
+    margin-right: 1rem;
+}
+
+.iconosEditYDelete{
+    width: 2rem;
+    margin-right: .8rem;
+    transition: 500ms;
+}
+
+.iconosEditYDelete:hover{
+    transform: scale(1.08);
+}
+
+.scroll{
+    width: 90%;
+    height: 16rem;
+    overflow: auto;
+    border: 1px solid rgb(189, 189, 189);
+    margin: .5rem;
+    border-radius: 1rem;
+}
+
+.comentar{
+    width: 90%;
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 1rem;
+}
+
+.cardPrincipal{
+    border: none !important;
+}
+
+.comentarPrincipal{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.bodyPrincipal{
+    padding: 0 !important;
+}
+
+.mensajeLogin{
+    padding-left: 1rem;
+    color: rgb(60, 65, 134);
+}
+
+/* Estilos para el boton de enviar comentario */
+
+.botonEnviar {
+    transform: scale(0.75);
+    font-family: inherit;
+    font-size: 20px;
+    background: royalblue;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+   }
+   
+   .botonEnviar span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+   }
+   
+   .botonEnviar svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+   }
+   
+   .botonEnviar:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+   }
+   
+   .botonEnviar:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+   }
+   
+   .botonEnviar:hover span {
+    transform: translateX(5em);
+   }
+   
+   .botonEnviar:active {
+    transform: scale(0.95);
+   }
+   
+   @keyframes fly-1 {
+    from {
+     transform: translateY(0.1em);
+    }
+   
+    to {
+     transform: translateY(-0.1em);
+    }
+   }
+
+   @media (max-width: 1290px){
+    .card-body{
+        padding-right: 0 !important;
+    }
+    .iconosEditYDelete{
+        transform: scale(0.8) ;
+        margin-right: 0.2rem;
+    }
+
+    .iconosEditYDelete:hover{
+        transform: scale(1) ;
+    }
+
+    .card-text{
+        width: 72vw;
+    }
+   }
+   
+   @media (max-width: 1144px){
+    .card-body{
+        padding-right: 0 !important;
+    }
+    .iconosEditYDelete{
+        transform: scale(0.8) ;
+        margin-right: 0.2rem;
+    }
+
+    .iconosEditYDelete:hover{
+        transform: scale(0.9) ;
+    }
+
+    .card-text{
+        width: 40vw;
+    }
+   }
+
+   @media (max-width: 780px){
+    .card-body{
+        padding-right: 0 !important;
+    }
+    .iconosEditYDelete{
+        transform: scale(0.8) ;
+        margin-right: 0.2rem;
+    }
+
+    .iconosEditYDelete:hover{
+        transform: scale(0.9) ;
+    }
+
+    .card-text{
+        width: 35vw;
+    }
+
+   }
+
+   @media (max-width: 494px){
+    .card-body{
+        padding-right: 0 !important;
+    }
+    .iconosEditYDelete{
+        transform: scale(0.8) ;
+        margin-right: 0.2rem;
+    }
+
+    .iconosEditYDelete:hover{
+        transform: scale(0.9) ;
+    }
+
+    .card-text{
+        width: 50vw;
+    }
+   }

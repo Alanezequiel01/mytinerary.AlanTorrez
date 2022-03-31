@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Pragati+Narrow&display=swap');
+
+/* Estilos carousel */
+#app { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+body {
+  background: rgb(238, 238, 238);
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxSwiper{
+  width: 90vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper {
+  width: 85%;
+  height: 90vh;
+  padding: 1rem .8rem 3rem .8rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+.vectores{
+  width: 85vw;
+  background-color: #ffffff00;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tittleCarousel{
+  color: #019c92;
+  margin: 0;
+  padding: 0;
+  font-family: 'Oooh Baby', cursive !important;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.carta{
+  background-color: rgba(255, 255, 255, 0) !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.card-img-overlay{
+  padding: 0;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  padding: 0 !important;
+  height: calc((100% - 30px) / 2) !important;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: transform .5s;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 8px !important;
+}
+
+.swiper-slide:hover{
+transform: scale(0.98);
+}
+
+@media (max-width: 1024px) { 
+
+  .boxSwiper{
+    height: 65vh;
+  }
+
+  .swiper{
+    height: 65vh;
+  }
+}
+
+@media (max-width: 950px){
+  .aviones{
+    transform: scale(0.8);
+  }  
+  .vectores{
+    transform: scale(0.70);
+  }
+
+  .tittleCarousel{
+    transform: scale(1.5);
+
+}
+}
+
+@media (max-width: 760px){
+  .aviones{
+    transform: scale(0.6);
+  }  
+  .vectores{
+    transform: scale(0.55);
+  }
+
+  .tittleCarousel{
+    transform: scale(2);
+
+}
+}
+
+@media (max-width: 500px) { 
+
+  .boxSwiper{
+    height: 80vh;
+  }
+
+  .swiper{
+    height: 80vh;
+  }
+
+   .aviones{
+    transform: scale(0.5);
+  }  
+  .vectores{
+    transform: scale(0.45);
+  }
+
+  .tittleCarousel{
+    transform: scale(1.8);
+
+  }
+}
+  

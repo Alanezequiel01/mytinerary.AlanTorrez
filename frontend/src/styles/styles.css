@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Pragati+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@1&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.boxNavBar{
+  background-color: white !important;
+}
+
+/* Normal nav */
+.normalLink{
+  text-decoration: none !important;
+  color: black !important;
+}
+
+/* Nav responsive */
+.linkResponsive{
+  text-decoration: none;
+  color: black !important;
+}
+
+.botonesLink:hover{
+  color: black !important;
+}
+
+.containerHero{
+    width: 100%;
+    min-height: auto;
+    padding-right: 5rem;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.500), rgba(0, 0, 0, 0.150)), url(../assets/panorama-2117310.jpg) !important;
+    background-size: initial;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .nombreLogo{
+    font-family: 'Oooh Baby', cursive !important;
+    color: #da4831;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    font-size: 3.5rem;
+  }
+
+  .containerLogo{
+      max-width: 35rem;
+      margin: 2rem 0;
+      padding: 7rem 3rem;
+      border-radius: 20px;
+      background-color: rgba(204, 204, 204, 0.664);
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.5rem;
+      border: 4px solid #f6d9af;
+  }
+
+  .logo{
+     width: 15rem;
+  }
+
+  .logoPequeño{
+      width: 5rem;
+  }
+
+  .user{
+    width: 2.5rem;
+    margin-left: 1rem;
+  }
+
+  .slogan{
+      max-width: 28rem;
+      text-align: center;
+      margin-top: -.5rem;
+      font-size: 1.8rem;
+      color: rgb(255, 255, 255);
+      font-family: 'Archivo Narrow', sans-serif;
+  }
+
+.boxCallToAction{
+  width: 100%;
+  min-height: auto;
+  padding: 1rem 10rem;
+  background-color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.call{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Play', sans-serif;
+  font-size: 1.3rem;
+  color: rgb(0, 0, 0);
+}
+
+.imgCall{
+  width: 40rem;
+  height: 35rem;
+}
+
+/* Estilos para el contenedor de call to action */
+
+.contenedorBotonYCall{
+  min-height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -2.5rem;
+}
+.button {
+  position: relative;
+  height: 10rem;
+  width: 35rem;
+  padding: 60px 30px;
+  border: 3px solid #c45c35;
+  background: #ffffff;
+  user-select: none;
+  white-space: nowrap;
+  transition: all .05s linear;
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  
+ }
+ 
+ .button:before, .button:after {
+  content: "";
+  position: absolute;
+  background: #ffffff;
+  transition: all .2s linear;
+ }
+ 
+ .button:before {
+  width: calc(100% + 12px);
+  height: calc(100% - 32px);
+  top: 16px;
+  left: -6px;
+ }
+ 
+ .button:after {
+  width: calc(100% - 32px);
+  height: calc(100% + 12px);
+  top: -6px;
+  left: 16px;
+ }
+ 
+ .button:hover {
+  cursor: crosshair;
+ }
+ 
+ .button:active {
+  transform: scale(0.9);
+ }
+ 
+ .button:hover:before {
+  height: calc(100% - 64px);
+  top: 32px;
+ }
+ 
+ .button:hover:after {
+  width: calc(100% - 64px);
+  left: 32px;
+ }
+ 
+ .button span {
+  font-size: 15px;
+  z-index: 3;
+  position: relative;
+  font-weight: 600;
+ }
+
+/*  continuan los estilos del home */
+
+.contenedorFooter{
+  display: flex;
+  flex-direction: column;
+}
+.boxFooter{
+  min-height: 15rem;
+  width: 100%;
+  min-height: auto;
+  background-color: #8a8a8a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.boxNavFooter{
+  min-height: 7rem;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.logoRedSocial{
+  width: 2.3rem;
+  margin-right: .8rem
+}
+
+.info{
+  max-width: 100%;
+  width: 100%;
+  padding: 1rem 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1.3rem;
+  background-color: #c8c8c8;
+}
+
+.boxInfo{
+  min-width: 11rem;
+  margin-right: 2rem;
+}
+
+.cierre{
+  min-height: 2rem;
+  padding: .5rem 20rem;
+  max-width: 100%;
+  background-color: #8a8a8a;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.copyright{
+  margin: 0;
+}
+
+.botonesLink{
+  display: flex;
+}
+
+.titulosFooter{
+  color: #c45c35;
+}
+
+.redesSociales{
+  display: flex;
+  flex-direction: column;
+}
+
+.boxInProcess{
+  width: 100%;
+  min-height: auto;
+  background-color: rgba(202, 202, 202, 0.678);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.boxInProcess2{
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(202, 202, 202, 0);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.imagenBusqueda{
+  width: 10rem;
+  margin: 1rem;
+}
+
+.noSeEncotraronResultados{
+  margin-top: 5rem;
+}
+
+/* estilos para el input */
+.containerInput{
+  width: 26rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.inputSearch{
+  width: 80% !important;
+}
+
+.botonBuscar{
+  min-width: 2.5rem !important;
+  margin-left: .5rem;
+  background-color: #03B5AA !important;
+  border: 1px solid black !important;
+}
+
+.noResults{
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeeee;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .info{
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+  }
+
+  .cierre{
+    padding: .5rem 2rem;
+  }
+
+  .containerHero{
+    justify-content: center;
+    padding: 0;
+  }
+
+}
+
+@media (max-width: 500px) { 
+  .containerHero{
+    padding: 0;
+  }
+
+  .button {
+    transform: scale(0.7);
+   }
+
+   .button:active {
+    transform: scale(0.8);
+   }
+
+   .imgCall{
+    transform: scale(0.75);
+  }
+  .containerLogo{
+    transform: scale(0.75);
+  }
+
+  .boxCallToAction{
+    max-height: 38rem;
+  }
+
+  .info{
+    padding: 1rem 1rem;
+    flex-wrap: wrap;
+  }
+
+  .cierre{
+    padding: .5rem 1rem;
+  }
+    
+}
+
+
+.detalles{
+  width: 100%;
+  height: 100vh;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardsButton{
+  padding: 0 .5rem;
+  background-color: white;
+  border: none;
+  color: rgba(47, 47, 185, 0.794);
+  transition: 500ms;
+}
+
+.cardsButton:hover{
+  background-color: #03B5AA;
+  color: white;
+}
+
+.userImage{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
